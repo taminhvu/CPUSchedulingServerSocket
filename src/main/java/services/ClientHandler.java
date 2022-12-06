@@ -61,7 +61,6 @@ public class ClientHandler implements Runnable {
             sendAndReceivedKey();
 
             while (true) {
-                System.out.println("ok");
                 DataPackage dataPackage = (DataPackage) in.readObject();
                 System.out.println("Server received '" + dataPackage + "' from Client " + this.name);
                 SealedObject obj = dataPackage.getSealedObject();
@@ -73,7 +72,7 @@ public class ClientHandler implements Runnable {
                         algorithm = new FCFS(processes);
                         algorithm.calculate();
                         obj = HelperService.encryptObject(algorithm.getProcesses(),getSecretKey());
-                        String str = HelperService.encryptInput("ok",getSecretKey());
+                        String str = HelperService.encryptInput("fcfs",getSecretKey());
                         dataPackage = new DataPackage(obj,str);
                     }
                     break;
@@ -82,7 +81,7 @@ public class ClientHandler implements Runnable {
                         algorithm = new Priority(processes);
                         algorithm.calculate();
                         obj = HelperService.encryptObject(algorithm.getProcesses(),getSecretKey());
-                        String str = HelperService.encryptInput("ok",getSecretKey());
+                        String str = HelperService.encryptInput("priority",getSecretKey());
                         dataPackage = new DataPackage(obj,str);
                     }
                     break;
@@ -91,7 +90,7 @@ public class ClientHandler implements Runnable {
                         algorithm = new RRB(processes, 2);
                         algorithm.calculate();
                         obj = HelperService.encryptObject(algorithm.getProcesses(),getSecretKey());
-                        String str = HelperService.encryptInput("ok",getSecretKey());
+                        String str = HelperService.encryptInput("rrb",getSecretKey());
                         dataPackage = new DataPackage(obj,str);
                     }
                     break;
@@ -100,7 +99,7 @@ public class ClientHandler implements Runnable {
                         algorithm = new SJF(processes);
                         algorithm.calculate();
                         obj = HelperService.encryptObject(algorithm.getProcesses(),getSecretKey());
-                        String str = HelperService.encryptInput("ok",getSecretKey());
+                        String str = HelperService.encryptInput("sjf",getSecretKey());
                         dataPackage = new DataPackage(obj,str);
                     }
                     break;
