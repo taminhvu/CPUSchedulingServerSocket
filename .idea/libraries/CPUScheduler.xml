@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="CPUScheduler">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../CPUScheduler-master/dist/CPUScheduler.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

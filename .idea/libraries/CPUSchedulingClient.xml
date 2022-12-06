@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="CPUSchedulingClient">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../CPUSchedulingClient/bouncycastle-jce-jdk13-112.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../CPUSchedulingClient/jar_files.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
